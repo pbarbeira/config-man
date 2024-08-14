@@ -22,7 +22,12 @@ $ make run
 ```
 This will generate a binary which will create and compile a bootstrapper.c file. All this code does is execute npm start in the directory of project (if you don't believe me, check for yourself!).
 
-You can easily configure your bash or wsl to run this binary from everywhere. Just create a directory in your ~/ and add the path to that directory to the PATH variable. Note that this will be local to the current session. Look up how to permanently modify the PATH variable for your particular distro to make it permanent.
+From here, just run
+```
+$./config-man
+```
+
+You can easily configure your bash or wsl to run this binary like any other linux command. Just create a directory in your ~/ and add the path to that directory to the PATH variable. Note that this will be local to the current session. Look up how to permanently modify the PATH variable for your particular distro to make it permanent.
 
 ## Workspaces
 

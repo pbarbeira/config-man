@@ -4,11 +4,13 @@ var= $(shell pwd)/src
 build:
 	@g++ -o config-boot boot.cpp
 
-run: build
+create: build
 	@./config-boot $(var)
 
 boot:
 	@g++ -o config-man config-boot.cpp
 
-boot-clean:
+clean:
 	@rm -rf config-boot config-boot.*
+
+run: create boot clean

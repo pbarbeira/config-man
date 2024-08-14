@@ -74,3 +74,10 @@ project
 └───folder2
     └───userconfig.xml
 ```
+
+## Git Structure
+Used conventions:
+* snapshot/MMDDYYYY - these are backup branches. They store the state of the project at the associated date
+* epic/* - here you can find the most recent working version of the given epic*
+* feature/* - feature branches, to be merged into parent e/pic/*
+

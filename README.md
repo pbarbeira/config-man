@@ -14,6 +14,16 @@ Config-Man appears as a simple solution to keep all your different configuration
 * Credential Manager
 * Collaborative Workspaces
 
+## Installation
+
+The repository comes with a boot.c file and a Makefile. To easily use the app, simply execute 
+```
+$ make run
+```
+This will generate a binary which will create and compile a bootstrapper.c file. All this code does is execute npm start in the directory of project (if you don't believe me, check for yourself!).
+
+You can easily configure your bash or wsl to run this binary from everywhere. Just create a directory in your ~/ and add the path to that directory to the PATH variable. Note that this will be local to the current session. Look up how to permanently modify the PATH variable for your particular distro to make it permanent.
+
 ## Workspaces
 
 The App is organized in Workspaces. Each workspace may have one or more root directories. The app acts by scanning these directories for configuration files using regex. You can customize the matching expressions in the Settings menu.

@@ -1,23 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-const char* SUFFIX = "/src start";
+#include <iostream>
+#include <fstream>
 
 int main(int argc, char* argv[]){
 	if(argc != 2){
-		printf("Usage: ./config-man <target_directory>\n");
-		return -1;
+		std::cout << "Usage: ./config-man <target-dir>\n";
+		return 1;
+	}
+	
+	std::string pwd(argv[1]);
+	
+	std::string code = 
+		"#include <iostream>\n\nint main(){\n\tstd::string cmd = \"npm --prefix " 
+		+ pwd + " start\";\n\tsystem(cmd.c_str());\n\n\treturn 0;\n}";
+
+	std::ofstream file("./config-boot.cpp");
+	if(file.is_open()){
+		file << code;	
+	}else{
+		std::cout << "Error\n";
 	}
 
-	char* cmd = "npm --prefix ";
 	
-	strncat(cmd, argv[1], strlen(argv[1]));
-	
-	//cmdSize = strlen(cmd) + strlen(SUFFIX);
-	//cmd = strncat(cmd, SUFFIX, cmdSize);
-
-	system(cmd);	
-
 	return 0;
 }

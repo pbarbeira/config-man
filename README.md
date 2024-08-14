@@ -16,14 +16,9 @@ Config-Man appears as a simple solution to keep all your different configuration
 
 ## Installation
 
-The repository comes with a boot.c file and a Makefile. To easily use the app, simply execute 
+The repository comes with a boot.c file and a Makefile. To easily use the app, simply run 
 ```
 $ make run
-```
-This will generate a binary which will create and compile a bootstrapper.c file. All this code does is execute npm start in the directory of project (if you don't believe me, check for yourself!).
-
-From here, just run
-```
 $./config-man
 ```
 

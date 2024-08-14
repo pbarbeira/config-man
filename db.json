@@ -1,0 +1,94 @@
+{
+  "schemas":{
+    "thread-config":{
+      "maxThreadNum": "int",
+      "threadTimeoutSeconds": "int"
+    },
+    "project-config":{
+      "jwtConfig":{
+          "iss": "string",
+          "aud": "string",
+          "secret": "string"
+        },
+        "webConfig":{
+          "hostname": "string",
+          "port": "int"
+        },
+        "dbConfig":{
+          "dbType": "string",
+          "server": "string",
+          "database": "string",
+          "user": "string",
+          "password": "string",
+          "port": "int"
+        }
+    }
+  },
+  "userData":{
+    "test_config_1":{
+      "_template": "thread-config",
+      "data":{
+        "maxThreadNum": 32,
+        "threadTimeoutSeconds": 2
+      }
+    },
+    "test_config_2":{
+      "_template": "project-config",
+      "data":{
+        "jwtConfig":{
+          "iss": "issuer",
+          "aud": "audience",
+          "secret": "my-super-long-test-secret-boi"
+        },
+        "webConfig":{
+          "hostname": "localhost",
+          "port": 1337
+        },
+        "dbConfig":{
+          "dbType": "MSSQL",
+          "server": ".\\sqlexpress",
+          "database": "IMS",
+          "user": "USR",
+          "password": "IPUB_PORTAL",
+          "port": 0
+        }
+      }
+    },
+    "test_config_3":{
+      "_template": "project-config",
+      "data":{
+        "jwtConfig":{
+          "iss": "iss",
+          "aud": "aud",
+          "secret": "secret"
+        },
+        "webConfig":{
+          "hostname": "hostname",
+          "port": 0
+        },
+        "dbConfig":{
+          "dbType": "dbType",
+          "server": "server",
+          "database": "database",
+          "user": "user",
+          "password": "password",
+          "port": 0
+        }
+      }
+    },
+    "test_config_4":{
+      "_template": "project-config",
+      "data":{
+        "jwtConfig":{
+          "iss": "",
+          "secret": "secret"
+        },
+        "dbConfig":{
+          "server": "server",
+          "user": "user",
+          "port": 0
+        }
+      }
+    }
+  }
+}

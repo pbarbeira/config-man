@@ -13,6 +13,9 @@ Config-Man appears as a simple solution to keep all your different configuration
 #### Going Forward:
 * Credential Manager
 * Collaborative Workspaces
+* Pomodoro Counter
+* Kanboard
+* Integrated Git UI
 
 ## Installation
 
